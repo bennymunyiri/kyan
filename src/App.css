@@ -1,0 +1,704 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;0,800;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;0,800;1,800&display=swap');
+
+
+.mini_header {
+  width: 100%;
+  height: auto;
+  /* background-color: yellow; */
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.mini {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  display: flex;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 10%;
+  font-size: 5vh;
+  color: rgb(253, 162, 177);
+}
+
+.logo2 {
+  font-family: "Playfair Display", serif;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 0%;
+
+  font-size: 5vh;
+}
+
+.logo3 {
+  font-family: "Playfair Display", serif;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 0%;
+  font-size: 2vh;
+}
+
+.nav {
+  width: 40%;
+  height: 100%;
+  background-color: white;
+  position: relative;
+  /* Set position to relative for absolute positioning of the dropdown */
+}
+
+.nav-toggle {
+  display: none;
+  /* Hide by default on larger screens */
+  cursor: pointer;
+  font-size: 3vh;
+  /* padding: 2%; */
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  padding: 2%;
+  margin: 3%;
+  text-decoration: none;
+}
+
+.links {
+  text-decoration: none;
+  font-size: 3vh;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 5%;
+  margin-right: 5%;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.links:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  /* Adjust the line thickness as needed */
+  background-color: rgb(253, 162, 177);
+  /* Set the desired color */
+  transition: all 0.3s ease;
+  /* Adjust the transition duration as needed */
+}
+
+/* Media query for smaller screens (mobile) */
+@media (max-width: 900px) {
+
+  .logo {
+    font-family: "Playfair Display", serif;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 10%;
+    font-size: 3vh;
+    font-weight: bold;
+    color: rgb(248, 171, 183);
+  }
+
+  .logo2 {
+    font-family: "Playfair Display", serif;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 0%;
+    font-weight: bold;
+    font-size: 3vh;
+  }
+
+  .nav-toggle {
+    display: block;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    text-decoration: none;
+    row-gap: 1vh;
+    box-shadow: 0 0 0.5vh grey;
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    font-size: 2vh;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    background-color: #e5eaee;
+    z-index: 1;
+  }
+
+  .links {
+    text-decoration: none;
+    font-size: 3vh;
+    font-family: "Montserrat", sans-serif;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: black;
+    transition: all 0.3s ease;
+  }
+
+  .dropdown-visible .nav-links {
+    display: flex;
+  }
+
+  .header {
+    height: 7vh;
+  }
+}
+
+/* 
+=============================
+banner
+============================= */
+.banner {
+  width: 100%;
+  height: auto;
+  background-color: #e5eaee;
+  display: flex;
+}
+
+.banner_des {
+  margin: 5%;
+  background-color: #e5eaee;
+  width: 40%;
+  height: auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3vh;
+  overflow: hidden;
+  padding: 2%;
+}
+
+.sentence {
+  margin: 3vh;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+
+.slide {
+  background-color: #e5eaee;
+  width: 50%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.zoom {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.visible {
+  opacity: 1;
+}
+
+
+.bannr {
+  width: 100%;
+  height: auto;
+  background-color: #e5eaee;
+  display: flex;
+}
+
+.phn_img {
+  width: 100%;
+  filter: grayscale(80%);
+}
+
+.over {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* Background color for better readability */
+  padding: 2vh;
+  font-family: "Montserrat", sans-serif;
+  /* Font style */
+  color: white;
+  /* Text color */
+  font-size: 3vh;
+  font-weight: bold;
+}
+
+/* =================================
+products
+================================= */
+
+.products {
+  width: 100%;
+  display: flex;
+  background-color: white;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 20%;
+  height: 50vh;
+  background-color: #e5eaee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2%;
+  margin: 1.5%;
+  transition: transform 0.3s ease-in-out;
+  /* Added transition property */
+}
+
+.product:hover {
+  transform: scale(1.05);
+  /* Added scale transform on hover */
+}
+
+
+.img {
+  height: fit-content;
+  object-fit: cover;
+  width: 80%;
+}
+
+.flower_name {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5vh;
+}
+
+.layout {
+  width: 100%;
+  background-color: white;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.viewMore {
+  width: 98%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  margin: 1%;
+  height: auto;
+}
+
+.view {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 1.8%;
+  font-size: large;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(236, 192, 199);
+  color: black;
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.view:hover {
+  transform: scale(1.05);
+  /* Added scale transform on hover */
+}
+
+@media (max-width: 600px) {
+  .products {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    column-gap: 2%;
+  }
+
+  .product {
+    width: 80%;
+    margin-top: 2%;
+    height: 30vh;
+    background-color: #e5eaee;
+    margin-left: 10%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img {
+    height: 70%;
+    object-fit: cover;
+    width: fit-content;
+  }
+
+  .flower_name {
+    font-family: "Playfair Display", serif;
+    font-size: 2vh;
+    margin: 4%;
+  }
+}
+
+/* ===============================
+footer
+======================== */
+
+
+.footer {
+  width: 100%;
+  padding: 1.5% 2%;
+  background-color: #deedfa;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  font-size: 1.5vh;
+}
+
+.section-child {
+  width: 100%;
+  padding: 2vh 0vh;
+  /* background-color: white; */
+  margin-top: 2vh;
+  display: flex;
+  column-gap: 4%;
+}
+
+.footer-child {
+  width: 22%;
+  padding: 1vh 1vh;
+  /* background-color: grey; */
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5vh;
+
+}
+
+.footer-list {
+  list-style-type: none;
+  font-size: 3vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1vh;
+  color: black;
+}
+
+.lik {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+
+@media (max-width: 900px) {
+  .liks {
+    font-size: large;
+  }
+
+  .lik {
+    font-size: small;
+  }
+
+
+}
+
+/* =================================
+farms
+=============================== */
+.farms {
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+
+.farms_parent {
+  width: 100%;
+  height: auto;
+  display: flex;
+  background-color: #e5eaee;
+}
+
+.farms_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 15%;
+  background-color: white;
+  margin-left: 20%
+}
+
+.farms_img {
+  width: 50%;
+  height: 100%;
+}
+
+.farms_description {
+  width: 50%;
+  height: 100%;
+  background: #e5eaee;
+  padding: 5%;
+  /* padding-left: %; */
+}
+
+.farm_title {
+  font-family: "Playfair Display", serif;
+  font-size: large;
+  font-weight: bold;
+  margin-top: 4%;
+  margin: 4%;
+}
+
+.img_farmers {
+  width: 100%;
+  filter: grayscale(30%);
+}
+
+.farm_desc {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3vh;
+}
+
+.planes_title {
+  font-family: "Playfair Display", serif;
+  font-size: large;
+  font-weight: bold;
+}
+
+.planes_description {
+  width: 50%;
+  height: 100%;
+  background: #deedfa;
+  padding: 5%;
+}
+
+.planes_img {
+  height: 100%;
+}
+
+.img_planes {
+  width: 100%;
+}
+
+.view_expo {
+  margin-top: 10%;
+  /* margin-left: 5%; */
+  margin-right: 5%;
+  padding: 1.8%;
+  font-size: large;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(236, 192, 199);
+  color: black;
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.view_expo:hover {
+  transform: scale(1.05);
+  /* Added scale transform on hover */
+}
+
+.img_planes {
+  height: 100%;
+  filter: grayscale(60%);
+}
+
+.abouts {
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+
+.abouts_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 15%;
+  background-color: white;
+  margin-left: 20%
+}
+
+.about_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 15%;
+  background-color: #8cc3f3;
+  margin-left: 20%
+}
+
+.about_us {
+  width: 100%;
+  height: auto;
+  background-color: #a7d6ff;
+}
+
+.para {
+  padding: 5%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3vh;
+}
+
+.location {
+  width: 100%;
+  height: 50vh;
+  background-color: #e5eaee;
+  display: flex;
+}
+
+.maps {
+  padding: 0%;
+  width: auto;
+  height: 100%;
+  background-color: #e5eaee;
+}
+
+.directions {
+  width: 50%;
+  height: 100%;
+  background-color: #e5eaee;
+
+}
+
+.directions_title {
+  padding: 5%;
+
+}
+
+@media(max-width: 600px) {
+  .para {
+    padding: 5%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2vh;
+  }
+}
+
+/* ===========================
+enquiry
+======================= */
+
+.container_cont {
+  margin-left: 25%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 50%;
+  height: auto;
+  background-color: #b0d8fc;
+}
+
+.contact_heading {
+  height: 100%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+}
+
+.form_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.forms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+
+.view_contact {
+
+  margin: 5%;
+  padding: 1.8%;
+  font-size: large;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(236, 192, 199);
+  color: black;
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.text_area {
+  width: 100%;
+  font-size: large;
+  font-family: "Montserrat", sans-serif;
+  margin: 2%;
+}
+
+/* ==========================================
+phones homepage
+========================================== */
+.phones_parent {
+  width: 100%;
+  height: auto;
+  /* display: flex; */
+  /* flex-direction: row; */
+  background-color: #e5eaee;
+}
+
+.planes_img {
+  width: 100%;
+  background-color: e5eaee;
+  height: 50%;
+}
+
+.phone_img {
+  width: 100%;
+
+}
+
+.phones_description {
+
+  width: 100%;
+  height: 50%;
+  background: e5eaee;
+
+  padding: 5%;
+  /* padding-left: %; */
+}
+
+.phones_desc {
+  font-family: "Montserrat" sans-serif;
+  font-size: 2vh;
+}
+
+.phone_planes {
+  width: 100%;
+  height: 50%;
+}
+
+.planes_parent {
+  width: 100%;
+  height: auto;
+  background-color: #e5eaee;
+}
+
+.phone_about {
+  background-color: #8cc3f3;
+}
