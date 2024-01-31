@@ -23,7 +23,7 @@ export default function Footer() {
                 <div className="footer-child">
                     <ul className="footer-list">
                         <h3 className="links">Contact</h3>
-                        <li className="link">kyannltd@gmail.com</li>
+                        <li className="lik">kyannltd@gmail.com</li>
                     </ul>
                 </div>
             </div>
