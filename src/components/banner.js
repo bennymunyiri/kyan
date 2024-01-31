@@ -42,7 +42,7 @@ export default function Banner() {
             {screenWidth <= 600 ? (
                 <>
                     <img className="phn_img" src={images[currentSlide]} alt={`Mobile Banner ${currentSlide + 1}`} />
-                    <p className='over'>{sentences[currentSlide]}</p>
+                    <p className='over'>Blossom together with Kyan Exports</p>
                 </>
             ) : (
                 <>
