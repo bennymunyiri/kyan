@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# View the live website here
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+www.kyanexports.site
 
 ## Available Scripts
 
